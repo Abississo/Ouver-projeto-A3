@@ -1,0 +1,154 @@
+/* Estilos para o corpo da página */
+body {
+    background: linear-gradient(135deg, #1c1c1c, #2d2d2d);
+    color: white;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Estilos para a div de conteúdo */
+#conteudo {
+    text-align: center;
+    max-width: 900px;
+}
+
+/* Estilos para o título */
+#titulo {
+    .poetsen-one-regular {
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      } 
+    font-size: 4em;
+    color: #aff2f3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos para a caixa de texto */
+.caixa-texto {
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Estilos para os botões de notas */
+.nota {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(179, 179, 179, 0.897), transparent);
+    color: rgb(24, 24, 24);
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease; /* animação suave */
+}
+
+/* Estilos para o botão "Iniciar" */
+button#iniciar {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid #666;
+    background-color: white;
+    color: black;
+    text-transform: lowercase;
+    transition: transform 0.3s ease; /* animação suave */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilos para o botão "Iniciar" quando passado o cursor */
+button#iniciar:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para os botões de notas musicais quando passado o cursor */
+.nota:hover {
+    transform: scale(1.1);
+}
+
+/* Animação de descida */
+@keyframes descer {
+    from { top: -10px; opacity: 1; }
+    to { top: calc(100vh + 10px); opacity: 0; }
+}
+
+/* Animação para os botões deslizarem de cima para baixo */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para as bolinhas menores */
+.bolinha {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(184, 184, 184);
+    animation: descer linear;
+}
+
+/* Definindo cores para cada nota */
+.C { background-color: red; }
+.D { background-color: rgb(255, 115, 0); }
+.E { background-color: rgb(219, 233, 20); }
+.F { background-color: green; }
+.G { background-color: blue; }
+.A { background-color: indigo; }
+.B { background-color: hsl(300, 62%, 49%); }
+
+/* Esconder o botão "Iniciar" quando clicado */
+#iniciar.clicked {
+    display: none;
+}
+
+/* Centraliza os botões das notas musicais */
+#botoes-notas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#botoes-notas.show {
+    animation: slideDown 0.5s ease-in-out;
+}
+
+/* Estilos para o texto de boas-vindas */
+#boas-vindas {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}

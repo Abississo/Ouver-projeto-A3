@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Ouver</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="titulo">Ouver</div>
+        <div id="conteudo">
+            <div id="boas-vindas" class="caixa">
+                <!-- Texto de boas-vindas -->
+                <p>
+                    Bem-vindo ao ouver,
+                    O objetivo é mostrar como as frequências das notas musicais e os comprimentos de onda das cores podem estar em harmonia quando ajustados para seguir a proporção áurea. Ao clicar em um botão de nota musical, você verá a cor correspondente e ouvirá a nota tocada.
+                </p>
+            </div>
+            
+            <button id="iniciar" onclick="mostrarBotoes()">Iniciar</button>
+            
+            <div id="botoes-notas" style="display:none;">
+                <button class="nota C" onclick="playSound('do.mpeg', event)">Dó</button>
+                <button class="nota D" onclick="playSound('re.mpeg', event)">Ré</button>
+                <button class="nota E" onclick="playSound('mi.mpeg', event)">Mi</button>
+                <button class="nota F" onclick="playSound('fa.mpeg', event)">Fá</button>
+                <button class="nota G" onclick="playSound('sol.mpeg', event)">Sol</button>
+                <button class="nota A" onclick="playSound('la.mpeg', event)">Lá</button>
+                <button class="nota B" onclick="playSound('si.mpeg', event)">Si</button>
+            </div>
+
+            <!-- Div para as bolinhas -->
+            <div id="bolinhas-container"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
